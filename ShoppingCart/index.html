@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/build/tailwind.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+شnuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <title>violet Shopping - shopping cart</title>
+  </head>
+  <body class="text-black bg-gray-50">
+    
+  <div id="main-container">
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky top-0 py-3 w-full flex items-center bg-gray-200 z-1">
+      <div class="w-full max-w-[1170px] mx-auto flex items-center justify-between px-6">
+        <span class="text-violet-500 text-2xl cursor-pointer">
+          <i class="fas fa-bars"></i>
+        </span>
+        <span class="text-violet-500 font-extrabold text-2xl">violet shopping</span>
+        <div id="cart-btn" class="relative cursor-pointer">
+          <span class="text-violet-500 text-2xl">
+            <i class="fas fa-cart-plus"></i>
+          </span>
+          <div id="cart-items" class="absolute -top-2 -right-2 w-5 h-5 flex justify-center items-center rounded-full text-white bg-red-500">0</div>
+        </div>
+      </div>
+    </nav>
+    <!-- products -->
+    <section id="products" class="py-8">
+      <div>
+        <h2 class="text-center text-4xl mb-10 mt-10 capitalize tracking-[var(--mainSpacing)]">our products</h2>
+      </div>
+      <!-- single product -->
+      <div id="products-center" class="w-[90vw] max-w-[1170px] mx-auto grid gap-x-12 gap-y-10 grid-cols-[repeat(auto-fit,_minmax(260px,_1fr))]">
+        <div id="product" class="py-10 flex flex-col items-center justify-center">
+          <div id="img-container">
+            <img src="./images/product-1.jpeg" id="product-img" class="block w-full min-h-[12rem] rounded-t-lg" />
+          </div>
+          <div id="product-desc" class="mt-2 w-full flex flex-row justify-between pb-4 border-b border-gray-200">
+            <p id="product-price" class="text-violet-500 font-bold">11.99 $</p>
+            <p id="product-title" class="font-bold text-base">carpet</p>
+          </div>
+          <button id="add-to-cart" class="bg-gray-200 border-none outline-none px-4 py-2 text-violet-500 font-bold my-4 mt-5 rounded-lg cursor-pointer">
+            <i class="fas fa-shopping-cart"></i>
+            add to cart
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Cart section -->
+    <section class="flex flex-row justify-center">
+      <div id="backdrop" class="bg-black bg-opacity-50 fixed top-0 left-0 w-full h-full hidden z-10"></div>
+      <!-- <button class="btn show-modal">show modal</button> -->
+      <div id="cart" class="flex flex-col justify-between fixed z-20 w-96 p-4 min-h-48 mx-auto bg-white border border-gray-300 rounded opacity-0 transition-all duration-500">
+        <h3 class="text-center font-bold">Your Cart</h3>
+        <div id="cart-content" class="p-4">
+          <!-- single item -->
+      <!--<div class="cart-item">
+              <img class="w-24 h-auto rounded-md" src="./images/product-2.jpeg" />
+              <div class="flex flex-col justify-between h-full">
+                <h4 class="text-gray-700">product title</h4>
+                <h5 class="mt-2 text-gray-300">$ 12.99</h5>
+              </div>
+              <div class="flex flex-col justify-between items-center">
+                <i class="cursor-pointer text-violet-500 font-bold fas fa-chevron-up"></i>
+                <p>1</p>
+                <i class="cursor-pointer text-red-500 font-bold fas fa-chevron-down"></i>
+              </div>
+          </div> -->
+        </div> 
+        <div class="text-center flex flex-col">
+          <span id="cart-total" class="font-bold inline-block mr-4">total price : 90 $</span>
+          <div class="flex flex-row">
+            <button id="clear-cart" class="bg-white border border-violet-500 outline-none px-4 py-2 text-violet-500 font-bold my-4 mt-5 rounded-lg cursor-pointer w-full mr-3">clear cart</button>
+            <button id="cart-item-confirm" class="bg-gray-200 border-none outline-none px-4 py-2 text-violet-500 font-bold my-4 mt-5 rounded-lg cursor-pointer w-full">confirm</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>

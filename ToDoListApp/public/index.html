@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/build/tailwind.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ToDoListApp</title>
+
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen w-full bg-gray-100">
+    <header class="flex justify-center items-center mb-5">
+        <h1 class="text-xl text-purple-900">To Do List App</h1>
+    </header>
+    <section class="flex flex-col justify-start">
+        <div class="flex">
+            <form id="todo-form" class="w-96 bg-white rounded-lg flex justify-between border overflow-hidden border-purple-700">
+                <input type="text" id="todo-input" class="p-2 flex-1 border-none outline-none"/>
+                <button class="text-purple-700 bg-gray-200 p-2" type="submit">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
+            </form>
+            <div class="px-1 flex ml-2 bg-white border border-purple-700 overflow-hidden rounded-lg">
+                <select id="filter-todos" class="text-purple-700 outline-none w-40" name="todos">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div> 
+        </div>
+         <div class="w-96 mt-5">
+            <ul id="todolist">
+                <!-- <li id="todo" class="bg-white flex justify-between items-center px-3 py-2 rounded-lg mb-4">
+                    <p class="text-purple-700">todo #1</p>
+                    <span id="todo__createdAt" class="text-gray-900">1402/1/28</span>
+                    <button class="block text-lg cursor-pointer bg-transparent p-2 text-green-600">
+                        <i id="todo__check" class="far fa-check-square"></i>
+                    </button>
+                    <button class="block text-lg cursor-pointer bg-transparent p-2 text-red-600">
+                        <i id="todo__remove" class="far fa-trash-alt"></i>
+                    </button>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+    <script src="../src/js/main.js" defer></script>
+</body>
+</html>
